@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Sat Nov 18 00:31:39 2023
+
+@author: Sankhapani
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Fri Nov 17 22:09:36 2023
 
 @author: Sankhapani
@@ -120,7 +127,7 @@ def main():
 
             labels = ["Healthy" if pred < threshold else "Unhealthy" for pred in neural_network.predicted_data]
 
-            st.line_chart(neural_network.predicted_data, use_container_width=True)
+            st.line_chart(list(neural_network.predicted_data), use_container_width=True)
             st.write("Labels:", labels)
 
             fig, ax = plt.subplots()
