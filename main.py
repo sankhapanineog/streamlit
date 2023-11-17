@@ -115,7 +115,7 @@ def main():
 
             labels = ["Healthy" if pred < threshold else "Unhealthy" for pred in neural_network.predicted_data]
 
-            st.line_chart(neural_network.predicted_data.tolist(), use_container_width=True)  # Convert to list
+            st.line_chart(neural_network.predicted_data, use_container_width=True)  # Remove tolist()
             st.write("Labels:", labels)
 
             fig, ax = plt.subplots()
