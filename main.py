@@ -82,8 +82,8 @@ def generate_data(df, threshold=0.7):
     return pd.DataFrame({"Sales": values, "Label": labels})
 
 def main():
-    st.title("Sales Forecasting Neural Network")
-    st.write("Predict sales from time-series data")
+    st.title("Asset health Forecasting Neural Network")
+    st.write("Predict health from time-series data")
 
     uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
 
