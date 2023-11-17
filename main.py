@@ -1,16 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 18 00:31:39 2023
 
-@author: Sankhapani
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Nov 17 22:09:36 2023
-
-@author: Sankhapani
-"""
 
 import streamlit as st
 import pandas as pd
@@ -104,7 +92,7 @@ def main():
 
     if uploaded_file is not None:
         data = pd.read_csv(uploaded_file)
-        st.line_chart(data["Sales"], use_container_width=True)
+        st.line_chart(data["Sales"].tolist(), use_container_width=True)  # Convert to list
 
         learning_rate = st.sidebar.slider("Learning Rate", min_value=0.001, max_value=0.1, value=0.01, step=0.001)
         hidden_size = st.sidebar.slider("Hidden Layer Size", min_value=1, max_value=10, value=3, step=1)
@@ -127,7 +115,7 @@ def main():
 
             labels = ["Healthy" if pred < threshold else "Unhealthy" for pred in neural_network.predicted_data]
 
-            st.line_chart(list(neural_network.predicted_data), use_container_width=True)
+            st.line_chart(neural_network.predicted_data.tolist(), use_container_width=True)  # Convert to list
             st.write("Labels:", labels)
 
             fig, ax = plt.subplots()
