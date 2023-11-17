@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov 17 22:09:36 2023
+
+@author: Sankhapani
+"""
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -82,9 +89,10 @@ def generate_data(df, threshold=0.7):
     return pd.DataFrame({"Sales": values, "Label": labels})
 
 def main():
-    st.title("Asset health Forecasting Neural Network")
-    st.write("Predict health from time-series data")
-
+    st.title("Asset Health Forecasting Neural Network")
+    st.write("Predict asset health from time-series data") 
+    st.write("Please use this csv https://docs.google.com/spreadsheets/d/1USQGb9J_xTNIIndzf3REBBg5yT60ApabmG0MD_LLfkI/edit?usp=sharing")
+    st.write("GROUP 7: KAUSHIK DAS ,SANKHAPANI NEOG, RISHAB BORA, PRIYANUJ BORAH, DIGBIJOY CHETRY") 
     uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
 
     if uploaded_file is not None:
