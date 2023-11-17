@@ -85,7 +85,7 @@ def generate_data(df, threshold=0.7):
 
 def main():
     st.title("Asset Health Forecasting Neural Network")
-    st.write("Predict asset health from time-series data (currently it may show error due to csv column name mismatch") 
+    st.write("Predict asset health from time-series data (currently it may show error due to csv column name mismatch)) 
     st.write("Please use this csv https://docs.google.com/spreadsheets/d/1USQGb9J_xTNIIndzf3REBBg5yT60ApabmG0MD_LLfkI/edit?usp=sharing")
     st.write("GROUP 7") 
     uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
